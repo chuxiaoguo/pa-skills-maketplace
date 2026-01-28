@@ -21,6 +21,8 @@ concurrency:
 jobs:
   sync-and-build:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
     steps:
       # 检出主仓库
       - name: Checkout marketplace repo
@@ -53,8 +55,6 @@ jobs:
 
       - name: Build Astro
         run: npm run build
-        env:
-          NODE_ENV: production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
