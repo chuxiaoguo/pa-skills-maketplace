@@ -11,6 +11,8 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  # 允许访问其他仓库
+  actions: read
 
 concurrency:
   group: "pages"
