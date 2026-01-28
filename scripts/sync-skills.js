@@ -20,6 +20,8 @@ const CONFIG = {
   localRepoPath: path.resolve(ROOT_DIR, '../skills-repo'),
   // 远程仓库 URL（可选）
   remoteRepoUrl: process.argv.find(arg => arg.startsWith('--repo='))?.split('=')[1],
+  // GitHub Token（用于克隆私有仓库）
+  githubToken: process.env.GITHUB_TOKEN,
   // 输出路径
   outputPath: path.resolve(ROOT_DIR, 'src/data/skills.json'),
   // 下载目录
@@ -60,7 +62,14 @@ async function getRepoPath() {
       await fs.rm(CONFIG.tempCloneDir, { recursive: true, force: true });
       await ensureDir(CONFIG.tempCloneDir);
 
-      execSync(`git clone --depth 1 ${CONFIG.remoteRepoUrl} ${CONFIG.tempCloneDir}`, {
+      // 如果有 GitHub Token，使用 token 认证克隆
+      let cloneUrl = CONFIG.remoteRepoUrl;
+      if (CONFIG.githubToken && cloneUrl.includes('github.com')) {
+        // 将 https://github.com/user/repo 转换为 https://token@github.com/user/repo
+        cloneUrl = cloneUrl.replace('https://github.com/', `https://x-access-token:${CONFIG.githubToken}@github.com/`);
+      }
+
+      execSync(`git clone --depth 1 ${cloneUrl} ${CONFIG.tempCloneDir}`, {
         stdio: 'inherit'
       });
 

@@ -42,6 +42,7 @@ jobs:
           fi
         env:
           SKILLS_REPO_URL: ${{ secrets.SKILLS_REPO_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Astro
         run: npm run build
