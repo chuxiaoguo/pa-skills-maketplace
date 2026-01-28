@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+import skillsData from '../data/skills.json';
+
+// 读取技能数据
+const { skills, tags, meta } = skillsData;
+
+// 获取标签颜色
+function getTagColor(tag: string): string {
+  const colors: Record<string, string> = {
+    'brainstorming': 'bg-purple-100 text-purple-800',
+    'design': 'bg-pink-100 text-pink-800',
+    'requirements': 'bg-blue-100 text-blue-800',
+    'planning': 'bg-green-100 text-green-800',
+    'file-io': 'bg-yellow-100 text-yellow-800',
+    'bun': 'bg-orange-100 text-orange-800',
+    'filesystem': 'bg-cyan-100 text-cyan-800',
+    'file-operations': 'bg-indigo-100 text-indigo-800',
+  };
+  return colors[tag] || 'bg-gray-100 text-gray-800';
+}
+---
+
+<Layout>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Agent Skills Marketplace
+      </h1>
+      <p class="text-xl md:text-2xl text-primary-100 mb-8">
+        内网技能市场
+      </p>
+      <div class="inline-block bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 font-mono text-lg">
+        <span class="text-primary-200">const</span>
+        <span class="text-white"> skills</span>
+        <span class="text-primary-200"> = </span>
+        <span class="text-yellow-300">{meta.total}</span>;
+      </div>
+      <p class="mt-4 text-primary-100">
+        // 发现和共享 Agent Skills
+      </p>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="py-8 -mt-8">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+          <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        <input
+          type="text"
+          id="search-input"
+          class="search-input w-full shadow-lg"
+          placeholder="搜索技能（支持名称、描述、标签）..."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Tags Section -->
+  <section class="py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-2">
+        <a href="/" class="skill-tag bg-primary-600 text-white">
+          全部 ({meta.total})
+        </a>
+        {tags.map((tag) => (
+          <a
+            href={`/category/${tag.name}`}
+            class={`skill-tag ${getTagColor(tag.name)}`}
+          >
+            {tag.name} ({tag.count})
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Grid -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {skills.map((skill) => (
+          <a href={`/skill/${skill.id}`} class="skill-card group" data-skill={JSON.stringify(skill)}>
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center text-white text-2xl">
+                {skill.name.charAt(0).toUpperCase()}
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-primary-600 transition-colors truncate">
+                  {skill.name}
+                </h3>
+                <p class="mt-1 text-sm text-gray-500 line-clamp-2">
+                  {skill.description}
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              {skill.tags.length > 0 ? (
+                skill.tags.slice(0, 3).map((tag) => (
+                  <span class={`skill-tag text-xs ${getTagColor(tag)}`}>
+                    #{tag}
+                  </span>
+                ))
+              ) : (
+                <span class="text-xs text-gray-400">无标签</span>
+              )}
+              {skill.tags.length > 3 && (
+                <span class="text-xs text-gray-400">+{skill.tags.length - 3}</span>
+              )}
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-sm text-gray-500">
+              <span>v{skill.version}</span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                {skill.updatedAt}
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden text-center py-16">
+        <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <h3 class="mt-2 text-sm font-medium text-gray-900">未找到匹配的技能</h3>
+        <p class="mt-1 text-sm text-gray-500">请尝试其他搜索关键词</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // 客户端搜索功能
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const skillsGrid = document.getElementById('skills-grid') as HTMLDivElement;
+  const emptyState = document.getElementById('empty-state') as HTMLDivElement;
+
+  // 获取所有技能卡片
+  const skillCards = Array.from(skillsGrid.children) as HTMLElement[];
+  const skills = skillCards.map(card => JSON.parse(card.dataset.skill || '{}'));
+
+  // 简单的搜索实现（不依赖 Fuse.js，减少依赖）
+  function search(query: string) {
+    const lowerQuery = query.toLowerCase().trim();
+
+    if (!lowerQuery) {
+      skillCards.forEach(card => card.classList.remove('hidden'));
+      emptyState.classList.add('hidden');
+      return;
+    }
+
+    let visibleCount = 0;
+
+    skillCards.forEach((card, index) => {
+      const skill = skills[index];
+      const matchName = skill.name.toLowerCase().includes(lowerQuery);
+      const matchDesc = skill.description.toLowerCase().includes(lowerQuery);
+      const matchTags = skill.tags.some((tag: string) => tag.toLowerCase().includes(lowerQuery));
+
+      if (matchName || matchDesc || matchTags) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      emptyState.classList.remove('hidden');
+    } else {
+      emptyState.classList.add('hidden');
+    }
+  }
+
+  // 监听输入
+  searchInput?.addEventListener('input', (e) => {
+    search((e.target as HTMLInputElement).value);
+  });
+</script>

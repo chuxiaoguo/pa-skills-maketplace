@@ -1,0 +1,11 @@
+{
+  "content": "\r\n## Use this when\r\n\r\n- Editing file I/O or scans in `packages/opencode`\r\n- Handling directory operations or external tools\r\n\r\n## Bun file APIs (from Bun docs)\r\n\r\n- `Bun.file(path)` is lazy; call `text`, `json`, `stream`, `arrayBuffer`, `bytes`, `exists` to read.\r\n- Metadata: `file.size`, `file.type`, `file.name`.\r\n- `Bun.write(dest, input)` writes strings, buffers, Blobs, Responses, or files.\r\n- `Bun.file(...).delete()` deletes a file.\r\n- `file.writer()` returns a FileSink for incremental writes.\r\n- `Bun.Glob` + `Array.fromAsync(glob.scan({ cwd, absolute, onlyFiles, dot }))` for scans.\r\n- Use `Bun.which` to find a binary, then `Bun.spawn` to run it.\r\n- `Bun.readableStreamToText/Bytes/JSON` for stream output.\r\n\r\n## When to use node:fs\r\n\r\n- Use `node:fs/promises` for directories (`mkdir`, `readdir`, recursive operations).\r\n\r\n## Repo patterns\r\n\r\n- Prefer Bun APIs over Node `fs` for file access.\r\n- Check `Bun.file(...).exists()` before reading.\r\n- For binary/large files use `arrayBuffer()` and MIME checks via `file.type`.\r\n- Use `Bun.Glob` + `Array.fromAsync` for scans.\r\n- Decode tool stderr with `Bun.readableStreamToText`.\r\n- For large writes, use `Bun.write(Bun.file(path), text)`.\r\n\r\n## Quick checklist\r\n\r\n- Use Bun APIs first.\r\n- Use `path.join`/`path.resolve` for paths.\r\n- Prefer promise `.catch(...)` over `try/catch` when possible.\r\n",
+  "files": [
+    {
+      "name": "SKILL.md",
+      "path": "bun-file-io/SKILL.md",
+      "type": "markdown",
+      "relativePath": "SKILL.md"
+    }
+  ]
+}

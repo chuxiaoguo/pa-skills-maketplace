@@ -1,0 +1,73 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'PA Skills Marketplace - 内网技能市场',
+  description = '发现和共享 Agent Skills，提升 AI 编程助手的能力'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style is:global>
+    @import '../styles/global.css';
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+  <!-- 导航栏 -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="/" class="flex items-center gap-2 text-xl font-bold text-primary-600">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+            <span>Skills Marketplace</span>
+          </a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="/" class="text-gray-600 hover:text-primary-600 transition-colors">
+            首页
+          </a>
+          <a href="https://gitlab.company.com/skills-repo" target="_blank" rel="noopener" class="text-gray-600 hover:text-primary-600 transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm-1 5v4H7v2h4v4h2v-4h4v-2h-4V7h-2z"/>
+            </svg>
+            GitLab
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主内容 -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-white border-t border-gray-200 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-gray-500 text-sm">
+          © 2026 PA Skills Marketplace. 基于 Astro 构建。
+        </div>
+        <div class="flex gap-6 text-sm">
+          <a href="/" class="text-gray-500 hover:text-primary-600 transition-colors">首页</a>
+          <a href="https://gitlab.company.com/skills-repo" target="_blank" rel="noopener" class="text-gray-500 hover:text-primary-600 transition-colors">GitLab</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

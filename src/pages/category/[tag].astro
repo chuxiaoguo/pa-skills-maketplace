@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import skillsData from '../../data/skills.json';
+
+// 生成所有分类页面的静态路径
+export function getStaticPaths() {
+  const { tags } = skillsData;
+
+  return tags.map((tag) => ({
+    params: { tag: tag.name },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+
+// 筛选出该标签下的技能
+const taggedSkills = skillsData.skills.filter(
+  (skill) => skill.tags && skill.tags.includes(tag.name)
+);
+
+// 分页配置
+const pageSize = 12;
+const totalPages = Math.ceil(taggedSkills.length / pageSize);
+
+// 获取标签颜色
+function getTagColor(tagName: string): string {
+  const colors: Record<string, string> = {
+    'brainstorming': 'bg-purple-100 text-purple-800',
+    'design': 'bg-pink-100 text-pink-800',
+    'requirements': 'bg-blue-100 text-blue-800',
+    'planning': 'bg-green-100 text-green-800',
+    'file-io': 'bg-yellow-100 text-yellow-800',
+    'bun': 'bg-orange-100 text-orange-800',
+    'filesystem': 'bg-cyan-100 text-cyan-800',
+    'file-operations': 'bg-indigo-100 text-indigo-800',
+  };
+  return colors[tagName] || 'bg-gray-100 text-gray-800';
+}
+
+// 页面标题
+const title = `"${tag.name}" 分类的技能 (${tag.count}) - PA Skills Marketplace`;
+---
+
+<Layout title={title}>
+  <!-- Header -->
+  <section class="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="mb-4">
+        <ol class="flex items-center gap-2 text-sm text-primary-100">
+          <li><a href="/" class="hover:text-white transition-colors">首页</a></li>
+          <li>/</li>
+          <li class="text-white">{tag.name}</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-3xl md:text-4xl font-bold">
+        <span class="inline-flex items-center gap-2">
+          <span class="px-3 py-1 bg-white/20 rounded-lg text-lg">{tag.name}</span>
+          分类的技能
+        </span>
+      </h1>
+      <p class="mt-2 text-primary-100">
+        共 {tag.count} 个技能
+      </p>
+    </div>
+  </section>
+
+  <!-- Tags Navigation -->
+  <section class="py-4 border-b border-gray-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap gap-2">
+        <a href="/" class="skill-tag text-gray-600 hover:text-gray-900">
+          ← 全部技能
+        </a>
+        {skillsData.tags.map((t) => (
+          <a
+            href={`/category/${t.name}`}
+            class={`skill-tag ${t.name === tag.name ? 'ring-2 ring-primary-500 ' + getTagColor(t.name) : getTagColor(t.name)}`}
+          >
+            {t.name} ({t.count})
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Grid -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {taggedSkills.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {taggedSkills.map((skill) => (
+            <a href={`/skill/${skill.id}`} class="skill-card group">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center text-white text-2xl">
+                  {skill.name.charAt(0).toUpperCase()}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg font-semibold text-gray-900 group-hover:text-primary-600 transition-colors truncate">
+                    {skill.name}
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500 line-clamp-2">
+                    {skill.description}
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                {skill.tags.slice(0, 3).map((t) => (
+                  <span class={`skill-tag text-xs ${getTagColor(t)} ${t === tag.name ? 'ring-1 ring-primary-500' : ''}`}>
+                    #{t}
+                  </span>
+                ))}
+                {skill.tags.length > 3 && (
+                  <span class="text-xs text-gray-400">+{skill.tags.length - 3}</span>
+                )}
+              </div>
+
+              <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-sm text-gray-500">
+                <span>v{skill.version}</span>
+                <span class="flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  {skill.updatedAt}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="mt-2 text-sm font-medium text-gray-900">该分类下暂无技能</h3>
+          <p class="mt-1 text-sm text-gray-500">
+            <a href="/" class="text-primary-600 hover:text-primary-500">返回首页</a>
+          </p>
+        </div>
+      )}
+
+      <!-- Pagination (简单展示) -->
+      {totalPages > 1 && (
+        <div class="mt-8 flex justify-center gap-2">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              class={`px-4 py-2 rounded-md text-sm font-medium ${
+                page === 1
+                  ? 'bg-primary-600 text-white'
+                  : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+              }`}
+            >
+              {page}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

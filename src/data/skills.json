@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "generatedAt": "2026-01-28T16:15:51.254Z",
+    "sourceRepo": "local",
+    "total": 2,
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "brainstorming",
+      "count": 1
+    },
+    {
+      "name": "design",
+      "count": 1
+    },
+    {
+      "name": "requirements",
+      "count": 1
+    },
+    {
+      "name": "planning",
+      "count": 1
+    },
+    {
+      "name": "file-io",
+      "count": 1
+    },
+    {
+      "name": "bun",
+      "count": 1
+    },
+    {
+      "name": "filesystem",
+      "count": 1
+    },
+    {
+      "name": "file-operations",
+      "count": 1
+    }
+  ],
+  "skills": [
+    {
+      "id": "brainstorming",
+      "name": "brainstorming",
+      "path": "brainstorming",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "tags": [
+        "brainstorming",
+        "design",
+        "requirements",
+        "planning"
+      ],
+      "version": "1.0.0",
+      "author": "AI-Agent Team",
+      "updatedAt": "2026-01-28",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "brainstorming/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/brainstorming.zip",
+      "installCommand": "pa-skills add brainstorming"
+    },
+    {
+      "id": "bun-file-io",
+      "name": "bun-file-io",
+      "path": "bun-file-io",
+      "description": "Use this when you are working on file operations like reading, writing, scanning, or deleting files. It summarizes the preferred file APIs and patterns used in this repo. It also notes when to use filesystem helpers for directories.",
+      "tags": [
+        "file-io",
+        "bun",
+        "filesystem",
+        "file-operations"
+      ],
+      "version": "1.0.0",
+      "author": "AI-Agent Team",
+      "updatedAt": "2026-01-28",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "bun-file-io/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/bun-file-io.zip",
+      "installCommand": "pa-skills add bun-file-io"
+    }
+  ]
+}
