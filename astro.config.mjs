@@ -6,7 +6,7 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   outDir: 'dist',
-  base: process.env.NODE_ENV === 'production' ? '/pa-skills-maketplace' : '/',
+  base: '/pa-skills-maketplace',
   build: {
     format: 'directory'
   }
