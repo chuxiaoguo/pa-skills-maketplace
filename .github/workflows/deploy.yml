@@ -20,8 +20,17 @@ jobs:
   sync-and-build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      # 检出主仓库
+      - name: Checkout marketplace repo
         uses: actions/checkout@v4
+
+      # 检出 skills-repo（使用 marketplace 的权限）
+      - name: Checkout skills-repo
+        uses: actions/checkout@v4
+        with:
+          repository: chuxiaoguo/skills-repo
+          path: skills-repo
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -34,17 +43,11 @@ jobs:
 
       - name: Sync Skills Data
         run: |
-          if [ -n "$SKILLS_REPO_URL" ]; then
-            node scripts/sync-skills.js --repo="$SKILLS_REPO_URL"
-          else
-            echo "No SKILLS_REPO_URL provided, using local data"
-            node scripts/sync-skills.js
-          fi
+          # 使用本地检出的 skills-repo
+          node scripts/sync-skills.js
         env:
-          SKILLS_REPO_URL: ${{ secrets.SKILLS_REPO_URL }}
-          # 使用 Personal Access Token 或 GITHUB_TOKEN
-          # PAT 需要在仓库 Settings > Secrets 中配置，权限: repo
-          GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+          # 指定本地 skills-repo 路径
+          SKILLS_REPO_PATH: ${{ github.workspace }}/skills-repo
 
       - name: Build Astro
         run: npm run build

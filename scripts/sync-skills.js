@@ -16,8 +16,8 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 
 // 配置
 const CONFIG = {
-  // 本地 skills-repo 路径（优先）
-  localRepoPath: path.resolve(ROOT_DIR, '../skills-repo'),
+  // 本地 skills-repo 路径（优先，可通过环境变量指定）
+  localRepoPath: process.env.SKILLS_REPO_PATH || path.resolve(ROOT_DIR, '../skills-repo'),
   // 远程仓库 URL（可选）
   remoteRepoUrl: process.argv.find(arg => arg.startsWith('--repo='))?.split('=')[1],
   // GitHub Token（用于克隆私有仓库）
