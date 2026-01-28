@@ -33,6 +33,8 @@ npm run sync-skills
 npm run dev
 
 # 访问 http://localhost:4321
+# 注意：开发服务器使用根路径，生产部署使用 /pa-skills-maketplace 子路径
+# Astro 会根据 base 配置自动处理链接
 ```
 
 ## 构建
