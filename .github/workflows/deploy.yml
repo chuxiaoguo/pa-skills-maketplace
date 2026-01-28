@@ -42,7 +42,9 @@ jobs:
           fi
         env:
           SKILLS_REPO_URL: ${{ secrets.SKILLS_REPO_URL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 使用 Personal Access Token 或 GITHUB_TOKEN
+          # PAT 需要在仓库 Settings > Secrets 中配置，权限: repo
+          GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
       - name: Build Astro
         run: npm run build
