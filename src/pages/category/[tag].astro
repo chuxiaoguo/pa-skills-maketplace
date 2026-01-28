@@ -14,6 +14,8 @@ export function getStaticPaths() {
 
 const { tag } = Astro.props;
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 // 筛选出该标签下的技能
 const taggedSkills = skillsData.skills.filter(
   (skill) => skill.tags && skill.tags.includes(tag.name)
@@ -49,7 +51,7 @@ const title = `"${tag.name}" 分类的技能 (${tag.count}) - PA Skills Marketpl
       <!-- Breadcrumb -->
       <nav class="mb-4">
         <ol class="flex items-center gap-2 text-sm text-primary-100">
-          <li><a href="/" class="hover:text-white transition-colors">首页</a></li>
+          <li><a href={`${baseUrl}`} class="hover:text-white transition-colors">首页</a></li>
           <li>/</li>
           <li class="text-white">{tag.name}</li>
         </ol>
@@ -71,12 +73,12 @@ const title = `"${tag.name}" 分类的技能 (${tag.count}) - PA Skills Marketpl
   <section class="py-4 border-b border-gray-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-wrap gap-2">
-        <a href="/" class="skill-tag text-gray-600 hover:text-gray-900">
+        <a href={`${baseUrl}`} class="skill-tag text-gray-600 hover:text-gray-900">
           ← 全部技能
         </a>
         {skillsData.tags.map((t) => (
           <a
-            href={`/category/${t.name}`}
+            href={`${baseUrl}category/${t.name}`}
             class={`skill-tag ${t.name === tag.name ? 'ring-2 ring-primary-500 ' + getTagColor(t.name) : getTagColor(t.name)}`}
           >
             {t.name} ({t.count})
@@ -92,7 +94,7 @@ const title = `"${tag.name}" 分类的技能 (${tag.count}) - PA Skills Marketpl
       {taggedSkills.length > 0 ? (
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {taggedSkills.map((skill) => (
-            <a href={`/skill/${skill.id}`} class="skill-card group">
+            <a href={`${baseUrl}skill/${skill.id}`} class="skill-card group">
               <div class="flex items-start gap-4">
                 <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center text-white text-2xl">
                   {skill.name.charAt(0).toUpperCase()}
@@ -137,7 +139,7 @@ const title = `"${tag.name}" 分类的技能 (${tag.count}) - PA Skills Marketpl
           </svg>
           <h3 class="mt-2 text-sm font-medium text-gray-900">该分类下暂无技能</h3>
           <p class="mt-1 text-sm text-gray-500">
-            <a href="/" class="text-primary-600 hover:text-primary-500">返回首页</a>
+            <a href={`${baseUrl}`} class="text-primary-600 hover:text-primary-500">返回首页</a>
           </p>
         </div>
       )}

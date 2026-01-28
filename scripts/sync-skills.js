@@ -156,7 +156,7 @@ async function scanSkills(repoPath) {
         files,
         hasMultipleFiles: files.length > 1,
         content: parsed.content,
-        downloadUrl: `/downloads/${entry.name}.zip`,
+        downloadUrl: `downloads/${entry.name}.zip`,
         installCommand: `pa-skills add ${entry.name}`
       });
 
