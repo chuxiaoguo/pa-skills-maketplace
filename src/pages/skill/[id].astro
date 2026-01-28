@@ -14,7 +14,8 @@ export function getStaticPaths() {
 
 const { skill } = Astro.props;
 
-const baseUrl = import.meta.env.BASE_URL || '/';
+const rawBaseUrl = import.meta.env.BASE_URL || '/';
+const baseUrl = rawBaseUrl === '/' ? '' : rawBaseUrl.replace(/\/$/, '');
 
 // 读取技能详细内容
 let skillContent = '';
@@ -90,11 +91,11 @@ function formatMarkdownLine(line: string): string {
       <!-- Breadcrumb -->
       <nav class="mb-4">
         <ol class="flex items-center gap-2 text-sm text-primary-100">
-          <li><a href={`${baseUrl}`} class="hover:text-white transition-colors">首页</a></li>
+          <li><a href={`${baseUrl}/`} class="hover:text-white transition-colors">首页</a></li>
           <li>/</li>
           {backTag && (
             <>
-              <li><a href={`${baseUrl}category/${backTag}`} class="hover:text-white transition-colors">{backTag}</a></li>
+              <li><a href={`${baseUrl}/category/${backTag}`} class="hover:text-white transition-colors">{backTag}</a></li>
               <li>/</li>
             </>
           )}
@@ -148,7 +149,7 @@ function formatMarkdownLine(line: string): string {
               <div class="flex flex-wrap gap-2 mt-2">
                 {skill.tags.length > 0 ? (
                   skill.tags.map((tag) => (
-                    <a href={`${baseUrl}category/${tag}`} class={`skill-tag ${getTagColor(tag)}`}>
+                    <a href={`${baseUrl}/category/${tag}`} class={`skill-tag ${getTagColor(tag)}`}>
                       #{tag}
                     </a>
                   ))
@@ -274,7 +275,7 @@ function formatMarkdownLine(line: string): string {
                   .slice(0, 5)
                   .map((s) => (
                     <li>
-                      <a href={`${baseUrl}skill/${s.id}`} class="flex items-center gap-3 group">
+                      <a href={`${baseUrl}/skill/${s.id}`} class="flex items-center gap-3 group">
                         <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-md flex items-center justify-center text-white text-sm font-medium">
                           {s.name.charAt(0).toUpperCase()}
                         </div>
@@ -289,7 +290,7 @@ function formatMarkdownLine(line: string): string {
                   ))}
               </ul>
               {skillsData.skills.filter((s) => s.id !== skill.id && s.tags.some((t) => skill.tags.includes(t))).length > 5 && (
-                <a href={`${baseUrl}category/${skill.tags[0]}`} class="mt-4 block text-center text-sm text-primary-600 hover:text-primary-500">
+                <a href={`${baseUrl}/category/${skill.tags[0]}`} class="mt-4 block text-center text-sm text-primary-600 hover:text-primary-500">
                   查看更多 →
                 </a>
               )}

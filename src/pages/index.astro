@@ -5,7 +5,8 @@ import skillsData from '../data/skills.json';
 // 读取技能数据
 const { skills, tags, meta } = skillsData;
 
-const baseUrl = import.meta.env.BASE_URL || '/';
+const rawBaseUrl = import.meta.env.BASE_URL || '/';
+const baseUrl = rawBaseUrl === '/' ? '' : rawBaseUrl.replace(/\/$/, '');
 
 // 获取标签颜色
 function getTagColor(tag: string): string {
@@ -73,7 +74,7 @@ function getTagColor(tag: string): string {
         </a>
         {tags.map((tag) => (
           <a
-            href={`${baseUrl}category/${tag.name}`}
+            href={`${baseUrl}/category/${tag.name}`}
             class={`skill-tag ${getTagColor(tag.name)}`}
           >
             {tag.name} ({tag.count})
@@ -88,7 +89,7 @@ function getTagColor(tag: string): string {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map((skill) => (
-          <a href={`${baseUrl}skill/${skill.id}`} class="skill-card group" data-skill={JSON.stringify(skill)}>
+          <a href={`${baseUrl}/skill/${skill.id}`} class="skill-card group" data-skill={JSON.stringify(skill)}>
             <div class="flex items-start gap-4">
               <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center text-white text-2xl">
                 {skill.name.charAt(0).toUpperCase()}
