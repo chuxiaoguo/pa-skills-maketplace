@@ -107,13 +107,55 @@ async function readSkillsIndex(repoPath) {
 }
 
 /**
+ * 读取 skills-json 目录下的独立技能元数据
+ */
+async function readSkillsJsonData(repoPath) {
+  const skillsJsonDir = path.join(repoPath, 'skills-json');
+  const skillsDataMap = new Map();
+
+  try {
+    const entries = await fs.readdir(skillsJsonDir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      if (!entry.isFile() || !entry.name.endsWith('.json')) continue;
+
+      const jsonPath = path.join(skillsJsonDir, entry.name);
+      const content = await fs.readFile(jsonPath, 'utf-8');
+      const skillData = JSON.parse(content);
+
+      if (skillData.name) {
+        skillsDataMap.set(skillData.name, skillData);
+      }
+    }
+
+    console.log(`✓ 读取 skills-json 数据，包含 ${skillsDataMap.size} 个技能`);
+  } catch (error) {
+    console.warn('⚠ 无法读取 skills-json 目录:', error.message);
+  }
+
+  return skillsDataMap;
+}
+
+/**
  * 扫描目录获取所有技能
  */
 async function scanSkills(repoPath) {
   // 读取索引文件作为元数据补充
   const skillsIndex = await readSkillsIndex(repoPath);
+  // 读取 skills-json 目录下的独立元数据
+  const skillsJsonData = await readSkillsJsonData(repoPath);
 
-  const entries = await fs.readdir(repoPath, { withFileTypes: true });
+  // 技能存储在 skills-collection/ 子目录下
+  const skillsCollectionPath = path.join(repoPath, 'skills-collection');
+
+  try {
+    await fs.access(skillsCollectionPath);
+  } catch {
+    console.error('✗ 未找到 skills-collection 目录，请检查 skills-repo 结构');
+    return [];
+  }
+
+  const entries = await fs.readdir(skillsCollectionPath, { withFileTypes: true });
   const skills = [];
 
   for (const entry of entries) {
@@ -122,7 +164,7 @@ async function scanSkills(repoPath) {
     // 跳过隐藏目录和特殊目录
     if (entry.name.startsWith('.') || entry.name === 'node_modules') continue;
 
-    const skillPath = path.join(repoPath, entry.name);
+    const skillPath = path.join(skillsCollectionPath, entry.name);
     const skillMdPath = path.join(skillPath, 'SKILL.md');
 
     try {
@@ -135,29 +177,37 @@ async function scanSkills(repoPath) {
 
       // 获取索引中的元数据（如存在）
       const indexData = skillsIndex.get(entry.name) || {};
+      // 获取 skills-json 中的元数据（如存在）
+      const jsonData = skillsJsonData.get(entry.name) || {};
 
       // 提取文件列表
       const files = await scanSkillFiles(skillPath, entry.name);
 
-      // 合并标签：优先使用索引文件中的 tags，其次是 SKILL.md 中的 tags
-      const tags = Array.isArray(indexData.tags) && indexData.tags.length > 0
-        ? indexData.tags
-        : (Array.isArray(parsed.data.tags) ? parsed.data.tags : []);
+      // 合并标签：优先使用 skills-json 中的 tags，其次是索引文件，最后是 SKILL.md
+      const tags = Array.isArray(jsonData.tags) && jsonData.tags.length > 0
+        ? jsonData.tags
+        : (Array.isArray(indexData.tags) && indexData.tags.length > 0
+          ? indexData.tags
+          : (Array.isArray(parsed.data.tags) ? parsed.data.tags : []));
 
       skills.push({
         id: entry.name,
         name: parsed.data.name || entry.name,
         path: entry.name,
-        description: parsed.data.description || indexData.description || '',
+        description: parsed.data.description || jsonData.description || indexData.description || '',
         tags,
-        version: parsed.data.version || indexData.version || '1.0.0',
-        author: parsed.data.author || 'AI-Agent Team',
-        updatedAt: parsed.data.updatedAt || new Date().toISOString().split('T')[0],
+        version: parsed.data.version || jsonData.version || indexData.version || '1.0.0',
+        author: parsed.data.author || jsonData.author || 'AI-Agent Team',
+        updatedAt: parsed.data.updatedAt || jsonData.updatedAt || new Date().toISOString().split('T')[0],
+        // 新增：从 skills-json 获取的额外字段
+        stars: jsonData.stars || 0,
+        sourceUrl: jsonData.sourceUrl || '',
         files,
         hasMultipleFiles: files.length > 1,
         content: parsed.content,
         downloadUrl: `downloads/${entry.name}.zip`,
-        installCommand: `pa-skills add ${entry.name}`
+        installCommand: `pa-skills add ${entry.name}`,
+        downloadUrl: `/downloads/${entry.name}.zip`
       });
 
       console.log(`  ✓ 发现技能: ${entry.name} (标签: ${tags.length > 0 ? tags.join(', ') : '无'})`);
@@ -271,7 +321,8 @@ function calculateTags(skills) {
  */
 async function packSkill(skill, repoPath) {
   const zip = new JSZip();
-  const skillPath = path.join(repoPath, skill.id);
+  // 技能存储在 skills-collection/ 子目录下
+  const skillPath = path.join(repoPath, 'skills-collection', skill.id);
 
   async function addFilesToZip(dir, zipFolder) {
     const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -327,6 +378,8 @@ async function generateIndex(skills) {
       version: skill.version,
       author: skill.author,
       updatedAt: skill.updatedAt,
+      stars: skill.stars,
+      sourceUrl: skill.sourceUrl,
       files: skill.files,
       hasMultipleFiles: skill.hasMultipleFiles,
       downloadUrl: skill.downloadUrl,

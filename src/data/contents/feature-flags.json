@@ -1,0 +1,11 @@
+{
+  "content": "# feature-flags\r\n\r\nUse when feature flag tests fail, flags need updating, understanding @gate pragmas, debugging channel-specific test failures, or adding new flags to React.\r\n",
+  "files": [
+    {
+      "name": "SKILL.md",
+      "path": "feature-flags/SKILL.md",
+      "type": "markdown",
+      "relativePath": "SKILL.md"
+    }
+  ]
+}

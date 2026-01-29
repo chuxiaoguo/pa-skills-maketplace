@@ -1,0 +1,17 @@
+{
+  "content": "\n# ATXP Tools\n\nAccess ATXP's paid API tools via CLI.\n\n## Authentication\n\n```bash\n# Check if authenticated\necho $ATXP_CONNECTION\n\n# If not set, login:\nnpx atxp login\nsource ~/.atxp/config\n```\n\n## Commands\n\n| Command | Description |\n|---------|-------------|\n| `npx atxp search <query>` | Real-time web search |\n| `npx atxp image <prompt>` | AI image generation |\n| `npx atxp music <prompt>` | AI music generation |\n| `npx atxp video <prompt>` | AI video generation |\n| `npx atxp x <query>` | X/Twitter search |\n\n## Usage\n\n1. Verify `$ATXP_CONNECTION` is set\n2. Run the appropriate command\n3. Parse and present results\n\n## Programmatic Access\n\n```typescript\nimport { atxpClient, ATXPAccount } from '@atxp/client';\n\nconst client = await atxpClient({\n  mcpServer: 'https://search.mcp.atxp.ai',\n  account: new ATXPAccount(process.env.ATXP_CONNECTION),\n});\n\nconst result = await client.callTool({\n  name: 'search_search',\n  arguments: { query: 'your query' },\n});\n```\n\n## MCP Servers\n\n| Server | Tool |\n|--------|------|\n| `search.mcp.atxp.ai` | `search_search` |\n| `image.mcp.atxp.ai` | `image_create_image` |\n| `music.mcp.atxp.ai` | `music_create` |\n| `video.mcp.atxp.ai` | `create_video` |\n| `x-live-search.mcp.atxp.ai` | `x_live_search` |\n",
+  "files": [
+    {
+      "name": "SKILL.md",
+      "path": "atxp/SKILL.md",
+      "type": "markdown",
+      "relativePath": "SKILL.md"
+    },
+    {
+      "name": "_meta.json",
+      "path": "atxp/_meta.json",
+      "type": "code",
+      "relativePath": "_meta.json"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "content": "\n# Browser Automation with playwright-cli\n\n## Quick start\n\n```bash\nplaywright-cli open https://playwright.dev\nplaywright-cli click e15\nplaywright-cli type \"page.click\"\nplaywright-cli press Enter\n```\n\n## Core workflow\n\n1. Navigate: `playwright-cli open https://example.com`\n2. Interact using refs from the snapshot\n3. Re-snapshot after significant changes\n\n## Commands\n\n### Core\n\n```bash\nplaywright-cli open https://example.com/\nplaywright-cli close\nplaywright-cli type \"search query\"\nplaywright-cli click e3\nplaywright-cli dblclick e7\nplaywright-cli fill e5 \"user@example.com\"\nplaywright-cli drag e2 e8\nplaywright-cli hover e4\nplaywright-cli select e9 \"option-value\"\nplaywright-cli upload ./document.pdf\nplaywright-cli check e12\nplaywright-cli uncheck e12\nplaywright-cli snapshot\nplaywright-cli eval \"document.title\"\nplaywright-cli eval \"el => el.textContent\" e5\nplaywright-cli dialog-accept\nplaywright-cli dialog-accept \"confirmation text\"\nplaywright-cli dialog-dismiss\nplaywright-cli resize 1920 1080\n```\n\n### Navigation\n\n```bash\nplaywright-cli go-back\nplaywright-cli go-forward\nplaywright-cli reload\n```\n\n### Keyboard\n\n```bash\nplaywright-cli press Enter\nplaywright-cli press ArrowDown\nplaywright-cli keydown Shift\nplaywright-cli keyup Shift\n```\n\n### Mouse\n\n```bash\nplaywright-cli mousemove 150 300\nplaywright-cli mousedown\nplaywright-cli mousedown right\nplaywright-cli mouseup\nplaywright-cli mouseup right\nplaywright-cli mousewheel 0 100\n```\n\n### Save as\n\n```bash\nplaywright-cli screenshot\nplaywright-cli screenshot e5\nplaywright-cli pdf\n```\n\n### Tabs\n\n```bash\nplaywright-cli tab-list\nplaywright-cli tab-new\nplaywright-cli tab-new https://example.com/page\nplaywright-cli tab-close\nplaywright-cli tab-close 2\nplaywright-cli tab-select 0\n```\n\n### DevTools\n\n```bash\nplaywright-cli console\nplaywright-cli console warning\nplaywright-cli network\nplaywright-cli run-code \"async page => await page.context().grantPermissions(['geolocation'])\"\nplaywright-cli tracing-start\nplaywright-cli tracing-stop\nplaywright-cli video-start\nplaywright-cli video-stop video.webm\n```\n\n### Configuration\n```bash\n# configure the session\nplaywright-cli config my-config.json\n# Configure named session\nplaywright-cli --session=mysession config my-config.json\n# Start with configured session\nplaywright-cli open --config=my-config.json\n```\n\n### Sessions\n\n```bash\nplaywright-cli --session=mysession open example.com\nplaywright-cli --session=mysession click e6\nplaywright-cli session-list\nplaywright-cli session-stop mysession\nplaywright-cli session-stop-all\nplaywright-cli session-delete\nplaywright-cli session-delete mysession\n```\n\n## Example: Form submission\n\n```bash\nplaywright-cli open https://example.com/form\nplaywright-cli snapshot\n\nplaywright-cli fill e1 \"user@example.com\"\nplaywright-cli fill e2 \"password123\"\nplaywright-cli click e3\nplaywright-cli snapshot\n```\n\n## Example: Multi-tab workflow\n\n```bash\nplaywright-cli open https://example.com\nplaywright-cli tab-new https://example.com/other\nplaywright-cli tab-list\nplaywright-cli tab-select 0\nplaywright-cli snapshot\n```\n\n## Example: Debugging with DevTools\n\n```bash\nplaywright-cli open https://example.com\nplaywright-cli click e4\nplaywright-cli fill e7 \"test\"\nplaywright-cli console\nplaywright-cli network\n```\n\n```bash\nplaywright-cli open https://example.com\nplaywright-cli tracing-start\nplaywright-cli click e4\nplaywright-cli fill e7 \"test\"\nplaywright-cli tracing-stop\n```\n",
+  "files": [
+    {
+      "name": "SKILL.md",
+      "path": "playwright-cli/SKILL.md",
+      "type": "markdown",
+      "relativePath": "SKILL.md"
+    },
+    {
+      "name": "cli.ts",
+      "path": "playwright-cli/cli.ts",
+      "type": "code",
+      "relativePath": "cli.ts"
+    },
+    {
+      "name": "command.ts",
+      "path": "playwright-cli/command.ts",
+      "type": "code",
+      "relativePath": "command.ts"
+    },
+    {
+      "name": "commands.ts",
+      "path": "playwright-cli/commands.ts",
+      "type": "code",
+      "relativePath": "commands.ts"
+    },
+    {
+      "name": "daemon.ts",
+      "path": "playwright-cli/daemon.ts",
+      "type": "code",
+      "relativePath": "daemon.ts"
+    },
+    {
+      "name": "DEPS.list",
+      "path": "playwright-cli/DEPS.list",
+      "type": "text",
+      "relativePath": "DEPS.list"
+    },
+    {
+      "name": "helpGenerator.ts",
+      "path": "playwright-cli/helpGenerator.ts",
+      "type": "code",
+      "relativePath": "helpGenerator.ts"
+    },
+    {
+      "name": "program.ts",
+      "path": "playwright-cli/program.ts",
+      "type": "code",
+      "relativePath": "program.ts"
+    },
+    {
+      "name": "socketConnection.ts",
+      "path": "playwright-cli/socketConnection.ts",
+      "type": "code",
+      "relativePath": "socketConnection.ts"
+    }
+  ]
+}

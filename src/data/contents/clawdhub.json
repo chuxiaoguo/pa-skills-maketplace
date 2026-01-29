@@ -1,0 +1,11 @@
+{
+  "content": "\n# ClawdHub CLI\n\nInstall\n```bash\nnpm i -g clawdhub\n```\n\nAuth (publish)\n```bash\nclawdhub login\nclawdhub whoami\n```\n\nSearch\n```bash\nclawdhub search \"postgres backups\"\n```\n\nInstall\n```bash\nclawdhub install my-skill\nclawdhub install my-skill --version 1.2.3\n```\n\nUpdate (hash-based match + upgrade)\n```bash\nclawdhub update my-skill\nclawdhub update my-skill --version 1.2.3\nclawdhub update --all\nclawdhub update my-skill --force\nclawdhub update --all --no-input --force\n```\n\nList\n```bash\nclawdhub list\n```\n\nPublish\n```bash\nclawdhub publish ./my-skill --slug my-skill --name \"My Skill\" --version 1.2.0 --changelog \"Fixes + docs\"\n```\n\nNotes\n- Default registry: https://clawdhub.com (override with CLAWDHUB_REGISTRY or --registry)\n- Default workdir: cwd (falls back to Moltbot workspace); install dir: ./skills (override with --workdir / --dir / CLAWDHUB_WORKDIR)\n- Update command hashes local files, resolves matching version, and upgrades to latest unless --version is set\n",
+  "files": [
+    {
+      "name": "SKILL.md",
+      "path": "clawdhub/SKILL.md",
+      "type": "markdown",
+      "relativePath": "SKILL.md"
+    }
+  ]
+}

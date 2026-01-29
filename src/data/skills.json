@@ -1,59 +1,357 @@
 {
   "meta": {
-    "generatedAt": "2026-01-28T16:15:51.254Z",
+    "generatedAt": "2026-01-29T17:10:53.340Z",
     "sourceRepo": "local",
-    "total": 2,
+    "total": 50,
     "version": "1.0.0"
   },
   "tags": [
     {
-      "name": "brainstorming",
-      "count": 1
+      "name": "code-generation",
+      "count": 39
+    },
+    {
+      "name": "discovery",
+      "count": 33
+    },
+    {
+      "name": "testing",
+      "count": 30
+    },
+    {
+      "name": "cli",
+      "count": 29
+    },
+    {
+      "name": "search",
+      "count": 29
+    },
+    {
+      "name": "performance",
+      "count": 26
     },
     {
       "name": "design",
-      "count": 1
-    },
-    {
-      "name": "requirements",
-      "count": 1
-    },
-    {
-      "name": "planning",
-      "count": 1
-    },
-    {
-      "name": "file-io",
-      "count": 1
-    },
-    {
-      "name": "bun",
-      "count": 1
+      "count": 25
     },
     {
       "name": "filesystem",
+      "count": 24
+    },
+    {
+      "name": "io",
+      "count": 24
+    },
+    {
+      "name": "skills",
+      "count": 24
+    },
+    {
+      "name": "api",
+      "count": 22
+    },
+    {
+      "name": "writing",
+      "count": 20
+    },
+    {
+      "name": "frontend",
+      "count": 19
+    },
+    {
+      "name": "automation",
+      "count": 19
+    },
+    {
+      "name": "maintenance",
+      "count": 19
+    },
+    {
+      "name": "documentation",
+      "count": 18
+    },
+    {
+      "name": "dx",
+      "count": 18
+    },
+    {
+      "name": "planning",
+      "count": 17
+    },
+    {
+      "name": "react",
+      "count": 13
+    },
+    {
+      "name": "components",
+      "count": 12
+    },
+    {
+      "name": "security",
+      "count": 11
+    },
+    {
+      "name": "git",
+      "count": 9
+    },
+    {
+      "name": "database",
+      "count": 9
+    },
+    {
+      "name": "ui",
+      "count": 9
+    },
+    {
+      "name": "github",
+      "count": 7
+    },
+    {
+      "name": "caching",
+      "count": 7
+    },
+    {
+      "name": "authentication",
+      "count": 5
+    },
+    {
+      "name": "vue",
+      "count": 5
+    },
+    {
+      "name": "backend",
+      "count": 5
+    },
+    {
+      "name": "ux",
+      "count": 4
+    },
+    {
+      "name": "sql",
+      "count": 3
+    },
+    {
+      "name": "bun",
+      "count": 2
+    },
+    {
+      "name": "runtime",
+      "count": 2
+    },
+    {
+      "name": "version-control",
+      "count": 2
+    },
+    {
+      "name": "nextjs",
+      "count": 2
+    },
+    {
+      "name": "nodejs",
+      "count": 2
+    },
+    {
+      "name": "mdx",
+      "count": 2
+    },
+    {
+      "name": "debugging",
       "count": 1
     },
     {
-      "name": "file-operations",
+      "name": "express",
+      "count": 1
+    },
+    {
+      "name": "rest",
+      "count": 1
+    },
+    {
+      "name": "scaffolding",
+      "count": 1
+    },
+    {
+      "name": "angular",
+      "count": 1
+    },
+    {
+      "name": "jest",
       "count": 1
     }
   ],
   "skills": [
+    {
+      "id": "agent-browser",
+      "name": "agent-browser",
+      "path": "agent-browser",
+      "description": "Automates browser interactions for web testing, form filling, screenshots, and data extraction. Use when the user needs to navigate websites, interact with web pages, fill forms, take screenshots, test web applications, or extract information from web pages.",
+      "tags": [
+        "testing",
+        "git",
+        "github",
+        "api",
+        "security",
+        "authentication",
+        "debugging",
+        "caching",
+        "performance",
+        "cli",
+        "code-generation",
+        "search",
+        "discovery",
+        "filesystem",
+        "io",
+        "bun",
+        "runtime"
+      ],
+      "version": "1.0.0",
+      "author": "code-yeongyu",
+      "updatedAt": "2026-01-29T17:00:15.371Z",
+      "stars": 25546,
+      "sourceUrl": "https://github.com/code-yeongyu/oh-my-opencode/tree/dev/src/features/builtin-skills/agent-browser",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "agent-browser/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/agent-browser.zip",
+      "installCommand": "pa-skills add agent-browser"
+    },
+    {
+      "id": "analytics-tracking",
+      "name": "analytics-tracking",
+      "path": "analytics-tracking",
+      "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"conversion tracking,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\" \"GTM,\" \"analytics implementation,\" or \"tracking plan.\" For A/B test measurement, see ab-test-setup.",
+      "tags": [
+        "testing",
+        "code-generation",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "planning"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:02:02.600Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/analytics-tracking",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "analytics-tracking/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/analytics-tracking.zip",
+      "installCommand": "pa-skills add analytics-tracking"
+    },
+    {
+      "id": "atxp",
+      "name": "atxp",
+      "path": "atxp",
+      "description": "Access ATXP paid API tools for web search, AI image generation, music creation, video generation, and X/Twitter search. Use when users need real-time web search, AI-generated media (images, music, video), or X/Twitter search. Requires authentication via `npx atxp login`.",
+      "tags": [
+        "api",
+        "cli",
+        "search",
+        "discovery"
+      ],
+      "version": "1.0.0",
+      "author": "moltbot",
+      "updatedAt": "2026-01-29T17:00:20.829Z",
+      "stars": 152,
+      "sourceUrl": "https://github.com/moltbot/skills/tree/main/skills/emilioacc/atxp",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "atxp/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        },
+        {
+          "name": "_meta.json",
+          "path": "atxp/_meta.json",
+          "type": "code",
+          "relativePath": "_meta.json"
+        }
+      ],
+      "hasMultipleFiles": true,
+      "downloadUrl": "/downloads/atxp.zip",
+      "installCommand": "pa-skills add atxp"
+    },
+    {
+      "id": "better-auth-best-practices",
+      "name": "better-auth-best-practices",
+      "path": "better-auth-best-practices",
+      "description": "Skill for integrating Better Auth - the comprehensive TypeScript authentication framework.",
+      "tags": [
+        "frontend",
+        "react",
+        "vue",
+        "database",
+        "git",
+        "github",
+        "api",
+        "security",
+        "authentication",
+        "caching",
+        "performance",
+        "cli",
+        "code-generation",
+        "documentation",
+        "dx",
+        "filesystem",
+        "io",
+        "bun",
+        "runtime"
+      ],
+      "version": "1.0.0",
+      "author": "novuhq",
+      "updatedAt": "2026-01-29T17:01:31.052Z",
+      "stars": 38490,
+      "sourceUrl": "https://github.com/novuhq/novu/tree/next/.claude/skills/better-auth-best-practices",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "better-auth-best-practices/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/better-auth-best-practices.zip",
+      "installCommand": "pa-skills add better-auth-best-practices"
+    },
     {
       "id": "brainstorming",
       "name": "brainstorming",
       "path": "brainstorming",
       "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
       "tags": [
-        "brainstorming",
+        "testing",
+        "git",
+        "version-control",
         "design",
-        "requirements",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "documentation",
+        "dx",
         "planning"
       ],
       "version": "1.0.0",
-      "author": "AI-Agent Team",
-      "updatedAt": "2026-01-28",
+      "author": "obra",
+      "updatedAt": "2026-01-29T17:01:33.452Z",
+      "stars": 39100,
+      "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/brainstorming",
       "files": [
         {
           "name": "SKILL.md",
@@ -71,15 +369,12 @@
       "name": "bun-file-io",
       "path": "bun-file-io",
       "description": "Use this when you are working on file operations like reading, writing, scanning, or deleting files. It summarizes the preferred file APIs and patterns used in this repo. It also notes when to use filesystem helpers for directories.",
-      "tags": [
-        "file-io",
-        "bun",
-        "filesystem",
-        "file-operations"
-      ],
+      "tags": [],
       "version": "1.0.0",
       "author": "AI-Agent Team",
-      "updatedAt": "2026-01-28",
+      "updatedAt": "2026-01-29",
+      "stars": 0,
+      "sourceUrl": "",
       "files": [
         {
           "name": "SKILL.md",
@@ -91,6 +386,2167 @@
       "hasMultipleFiles": false,
       "downloadUrl": "/downloads/bun-file-io.zip",
       "installCommand": "pa-skills add bun-file-io"
+    },
+    {
+      "id": "cache-components",
+      "name": "cache-components",
+      "path": "cache-components",
+      "description": "Expert guidance for Next.js Cache Components and Partial Prerendering (PPR).\n\n**PROACTIVE ACTIVATION**: Use this skill automatically when working in Next.js projects that have `cacheComponents: true` in their next.config.ts/next.config.js. When this config is detected, proactively apply Cache Components patterns and best practices to all React Server Component implementations.\n\n**DETECTION**: At the start of a session in a Next.js project, check for `cacheComponents: true` in next.config. If enabled, this skill's patterns should guide all component authoring, data fetching, and caching decisions.\n\n**USE CASES**: Implementing 'use cache' directive, configuring cache lifetimes with cacheLife(), tagging cached data with cacheTag(), invalidating caches with updateTag()/revalidateTag(), optimizing static vs dynamic content boundaries, debugging cache issues, and reviewing Cache Component implementations.\n",
+      "tags": [
+        "frontend",
+        "react",
+        "nextjs",
+        "api",
+        "performance",
+        "caching",
+        "skills",
+        "cli",
+        "code-generation",
+        "filesystem",
+        "io",
+        "components",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "vercel",
+      "updatedAt": "2026-01-29T16:59:53.064Z",
+      "stars": 137379,
+      "sourceUrl": "https://github.com/vercel/next.js/tree/canary/.claude-plugin/plugins/cache-components/skills/cache-components",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "cache-components/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        },
+        {
+          "name": "PATTERNS.md",
+          "path": "cache-components/PATTERNS.md",
+          "type": "markdown",
+          "relativePath": "PATTERNS.md"
+        },
+        {
+          "name": "REFERENCE.md",
+          "path": "cache-components/REFERENCE.md",
+          "type": "markdown",
+          "relativePath": "REFERENCE.md"
+        },
+        {
+          "name": "TROUBLESHOOTING.md",
+          "path": "cache-components/TROUBLESHOOTING.md",
+          "type": "markdown",
+          "relativePath": "TROUBLESHOOTING.md"
+        }
+      ],
+      "hasMultipleFiles": true,
+      "downloadUrl": "/downloads/cache-components.zip",
+      "installCommand": "pa-skills add cache-components"
+    },
+    {
+      "id": "canvas-design",
+      "name": "canvas-design",
+      "path": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "tags": [
+        "backend",
+        "express",
+        "design",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "planning",
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "updatedAt": "2026-01-29T17:01:58.817Z",
+      "stars": 57164,
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "canvas-design/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/canvas-design.zip",
+      "installCommand": "pa-skills add canvas-design"
+    },
+    {
+      "id": "competitor-alternatives",
+      "name": "competitor-alternatives",
+      "path": "competitor-alternatives",
+      "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' or 'competitive landing pages.' Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. Emphasizes deep research, modular content architecture, and varied section types beyond feature tables.",
+      "tags": [
+        "design",
+        "ux",
+        "api",
+        "security",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "planning",
+        "filesystem",
+        "io",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:02:06.441Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/competitor-alternatives",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "competitor-alternatives/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/competitor-alternatives.zip",
+      "installCommand": "pa-skills add competitor-alternatives"
+    },
+    {
+      "id": "copy-editing",
+      "name": "copy-editing",
+      "path": "copy-editing",
+      "description": "When the user wants to edit, review, or improve existing marketing copy. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' or 'copy sweep.' This skill provides a systematic approach to editing marketing copy through multiple focused passes.",
+      "tags": [
+        "testing",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "planning"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:01:53.809Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/copy-editing",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "copy-editing/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/copy-editing.zip",
+      "installCommand": "pa-skills add copy-editing"
+    },
+    {
+      "id": "copywriting",
+      "name": "copywriting",
+      "path": "copywriting",
+      "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" or \"CTA copy.\" For email copy, see email-sequence. For popup copy, see popup-cro.",
+      "tags": [
+        "testing",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "planning",
+        "design",
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:01:28.983Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/copywriting",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "copywriting/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/copywriting.zip",
+      "installCommand": "pa-skills add copywriting"
+    },
+    {
+      "id": "docx",
+      "name": "docx",
+      "path": "docx",
+      "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks",
+      "tags": [
+        "testing",
+        "api",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "planning",
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "updatedAt": "2026-01-29T17:01:41.288Z",
+      "stars": 57164,
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/docx",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "docx/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/docx.zip",
+      "installCommand": "pa-skills add docx"
+    },
+    {
+      "id": "executing-marketing-campaigns",
+      "name": "executing-marketing-campaigns",
+      "path": "executing-marketing-campaigns",
+      "description": "Plans, creates, and optimizes marketing campaigns including content strategy, social media, email, and analytics. Helps develop go-to-market strategies, campaign messaging, and performance measurement.",
+      "tags": [
+        "testing",
+        "design",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "planning"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:01:52.703Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/executing-marketing-campaigns",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "executing-marketing-campaigns/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/executing-marketing-campaigns.zip",
+      "installCommand": "pa-skills add executing-marketing-campaigns"
+    },
+    {
+      "id": "expo-cicd-workflows",
+      "name": "expo-cicd-workflows",
+      "path": "expo-cicd-workflows",
+      "description": "Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
+      "tags": [
+        "backend",
+        "nodejs",
+        "git",
+        "github",
+        "api",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "discovery",
+        "documentation",
+        "dx",
+        "mdx",
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "expo",
+      "updatedAt": "2026-01-29T17:01:54.747Z",
+      "stars": 763,
+      "sourceUrl": "https://github.com/expo/skills/tree/main/plugins/expo-deployment/skills/expo-cicd-workflows",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "expo-cicd-workflows/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/expo-cicd-workflows.zip",
+      "installCommand": "pa-skills add expo-cicd-workflows"
+    },
+    {
+      "id": "expo-deployment",
+      "name": "expo-deployment",
+      "path": "expo-deployment",
+      "description": "Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes",
+      "tags": [
+        "testing",
+        "skills",
+        "cli",
+        "discovery"
+      ],
+      "version": "1.0.0",
+      "author": "expo",
+      "updatedAt": "2026-01-29T17:01:46.488Z",
+      "stars": 763,
+      "sourceUrl": "https://github.com/expo/skills/tree/main/plugins/expo-deployment/skills/expo-deployment",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "expo-deployment/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/expo-deployment.zip",
+      "installCommand": "pa-skills add expo-deployment"
+    },
+    {
+      "id": "expo-dev-client",
+      "name": "expo-dev-client",
+      "path": "expo-dev-client",
+      "description": "Build and distribute Expo development clients locally or via TestFlight",
+      "tags": [
+        "testing",
+        "design",
+        "ui",
+        "caching",
+        "performance",
+        "cli",
+        "code-generation",
+        "search",
+        "discovery",
+        "filesystem",
+        "io",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "expo",
+      "updatedAt": "2026-01-29T17:01:43.399Z",
+      "stars": 763,
+      "sourceUrl": "https://github.com/expo/skills/tree/main/plugins/expo-app-design/skills/expo-dev-client",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "expo-dev-client/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/expo-dev-client.zip",
+      "installCommand": "pa-skills add expo-dev-client"
+    },
+    {
+      "id": "expo-tailwind-setup",
+      "name": "expo-tailwind-setup",
+      "path": "expo-tailwind-setup",
+      "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
+      "tags": [
+        "frontend",
+        "react",
+        "design",
+        "ui",
+        "api",
+        "caching",
+        "performance",
+        "code-generation",
+        "discovery",
+        "filesystem",
+        "io",
+        "components",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "expo",
+      "updatedAt": "2026-01-29T17:01:48.162Z",
+      "stars": 763,
+      "sourceUrl": "https://github.com/expo/skills/tree/main/plugins/expo-app-design/skills/expo-tailwind-setup",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "expo-tailwind-setup/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/expo-tailwind-setup.zip",
+      "installCommand": "pa-skills add expo-tailwind-setup"
+    },
+    {
+      "id": "frontend-design",
+      "name": "frontend-design",
+      "path": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.",
+      "tags": [
+        "frontend",
+        "react",
+        "vue",
+        "design",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "components"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "updatedAt": "2026-01-29T17:00:14.130Z",
+      "stars": 61871,
+      "sourceUrl": "https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design/skills/frontend-design",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "frontend-design/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/frontend-design.zip",
+      "installCommand": "pa-skills add frontend-design"
+    },
+    {
+      "id": "marketing-demand-acquisition",
+      "name": "marketing-demand-acquisition",
+      "path": "marketing-demand-acquisition",
+      "description": "Multi-channel demand generation, paid media optimization, SEO strategy, and partnership programs for Series A+ startups. Includes CAC calculator, channel playbooks, HubSpot integration, and international expansion tactics. Use when planning demand generation campaigns, optimizing paid media, building SEO strategies, establishing partnerships, or when user mentions demand gen, paid ads, LinkedIn ads, Google ads, CAC, acquisition, lead generation, or pipeline generation.",
+      "tags": [
+        "database",
+        "sql",
+        "testing",
+        "design",
+        "ui",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "search",
+        "discovery",
+        "planning",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:02:08.728Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/marketing-demand-acquisition",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "marketing-demand-acquisition/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/marketing-demand-acquisition.zip",
+      "installCommand": "pa-skills add marketing-demand-acquisition"
+    },
+    {
+      "id": "marketing-ideas",
+      "name": "marketing-ideas",
+      "path": "marketing-ideas",
+      "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' or 'ideas to grow.' This skill provides 140 proven marketing approaches organized by category.",
+      "tags": [
+        "testing",
+        "design",
+        "security",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "planning",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:01:44.599Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/marketing-ideas",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "marketing-ideas/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/marketing-ideas.zip",
+      "installCommand": "pa-skills add marketing-ideas"
+    },
+    {
+      "id": "marketing-psychology",
+      "name": "marketing-psychology",
+      "path": "marketing-psychology",
+      "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' or 'consumer behavior.' This skill provides 70+ mental models organized for marketing application.",
+      "tags": [
+        "testing",
+        "design",
+        "api",
+        "rest",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "planning"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:01:34.803Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/marketing-psychology",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "marketing-psychology/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/marketing-psychology.zip",
+      "installCommand": "pa-skills add marketing-psychology"
+    },
+    {
+      "id": "marketing-strategy-pmm",
+      "name": "marketing-strategy-pmm",
+      "path": "marketing-strategy-pmm",
+      "description": "Product marketing, positioning, GTM strategy, and competitive intelligence. Includes ICP definition, April Dunford positioning methodology, launch playbooks, competitive battlecards, and international market entry guides. Use when developing positioning, planning product launches, creating messaging, analyzing competitors, entering new markets, enabling sales, or when user mentions product marketing, positioning, GTM, go-to-market, competitive analysis, market entry, or sales enablement.",
+      "tags": [
+        "database",
+        "sql",
+        "testing",
+        "design",
+        "ui",
+        "ux",
+        "api",
+        "security",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "planning",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:02:00.375Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/marketing-strategy-pmm",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "marketing-strategy-pmm/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/marketing-strategy-pmm.zip",
+      "installCommand": "pa-skills add marketing-strategy-pmm"
+    },
+    {
+      "id": "mcp-builder",
+      "name": "mcp-builder",
+      "path": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "tags": [
+        "testing",
+        "design",
+        "api",
+        "security",
+        "performance",
+        "code-generation",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "planning",
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "updatedAt": "2026-01-29T17:01:50.127Z",
+      "stars": 57164,
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "mcp-builder/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/mcp-builder.zip",
+      "installCommand": "pa-skills add mcp-builder"
+    },
+    {
+      "id": "meeting-insights-analyzer",
+      "name": "meeting-insights-analyzer",
+      "path": "meeting-insights-analyzer",
+      "description": "Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights, and actionable feedback. Identifies when you avoid conflict, use filler words, dominate conversations, or miss opportunities to listen. Perfect for professionals seeking to improve their communication and leadership skills.",
+      "tags": [
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "planning"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "updatedAt": "2026-01-29T17:01:57.771Z",
+      "stars": 27470,
+      "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/meeting-insights-analyzer",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "meeting-insights-analyzer/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/meeting-insights-analyzer.zip",
+      "installCommand": "pa-skills add meeting-insights-analyzer"
+    },
+    {
+      "id": "mobile-android-design",
+      "name": "mobile-android-design",
+      "path": "mobile-android-design",
+      "description": "Master Material Design 3 and Jetpack Compose patterns for building native Android apps. Use when designing Android interfaces, implementing Compose UI, or following Google's Material Design guidelines.",
+      "tags": [
+        "git",
+        "github",
+        "design",
+        "ui",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "scaffolding",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "components",
+        "frontend"
+      ],
+      "version": "1.0.0",
+      "author": "wshobson",
+      "updatedAt": "2026-01-29T17:01:30.110Z",
+      "stars": 27168,
+      "sourceUrl": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/mobile-android-design",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "mobile-android-design/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/mobile-android-design.zip",
+      "installCommand": "pa-skills add mobile-android-design"
+    },
+    {
+      "id": "nano-pdf",
+      "name": "nano-pdf",
+      "path": "nano-pdf",
+      "description": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
+      "tags": [],
+      "version": "1.0.0",
+      "author": "moltbot",
+      "updatedAt": "2026-01-29T17:01:32.541Z",
+      "stars": 90628,
+      "sourceUrl": "https://github.com/moltbot/moltbot/tree/main/skills/nano-pdf",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "nano-pdf/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/nano-pdf.zip",
+      "installCommand": "pa-skills add nano-pdf"
+    },
+    {
+      "id": "native-data-fetching",
+      "name": "native-data-fetching",
+      "path": "native-data-fetching",
+      "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, axios, React Query, SWR, error handling, caching strategies, offline support.",
+      "tags": [
+        "frontend",
+        "react",
+        "database",
+        "api",
+        "security",
+        "authentication",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "expo",
+      "updatedAt": "2026-01-29T17:01:37.916Z",
+      "stars": 763,
+      "sourceUrl": "https://github.com/expo/skills/tree/main/plugins/expo-app-design/skills/native-data-fetching",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "native-data-fetching/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/native-data-fetching.zip",
+      "installCommand": "pa-skills add native-data-fetching"
+    },
+    {
+      "id": "playwright-cli",
+      "name": "playwright-cli",
+      "path": "playwright-cli",
+      "description": "Automates browser interactions for web testing, form filling, screenshots, and data extraction. Use when the user needs to navigate websites, interact with web pages, fill forms, take screenshots, test web applications, or extract information from web pages.",
+      "tags": [
+        "testing",
+        "cli",
+        "search",
+        "discovery"
+      ],
+      "version": "1.0.0",
+      "author": "microsoft",
+      "updatedAt": "2026-01-29T17:01:27.600Z",
+      "stars": 81819,
+      "sourceUrl": "https://github.com/microsoft/playwright/tree/main/packages/playwright/src/mcp/terminal",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "playwright-cli/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        },
+        {
+          "name": "cli.ts",
+          "path": "playwright-cli/cli.ts",
+          "type": "code",
+          "relativePath": "cli.ts"
+        },
+        {
+          "name": "command.ts",
+          "path": "playwright-cli/command.ts",
+          "type": "code",
+          "relativePath": "command.ts"
+        },
+        {
+          "name": "commands.ts",
+          "path": "playwright-cli/commands.ts",
+          "type": "code",
+          "relativePath": "commands.ts"
+        },
+        {
+          "name": "daemon.ts",
+          "path": "playwright-cli/daemon.ts",
+          "type": "code",
+          "relativePath": "daemon.ts"
+        },
+        {
+          "name": "DEPS.list",
+          "path": "playwright-cli/DEPS.list",
+          "type": "text",
+          "relativePath": "DEPS.list"
+        },
+        {
+          "name": "helpGenerator.ts",
+          "path": "playwright-cli/helpGenerator.ts",
+          "type": "code",
+          "relativePath": "helpGenerator.ts"
+        },
+        {
+          "name": "program.ts",
+          "path": "playwright-cli/program.ts",
+          "type": "code",
+          "relativePath": "program.ts"
+        },
+        {
+          "name": "socketConnection.ts",
+          "path": "playwright-cli/socketConnection.ts",
+          "type": "code",
+          "relativePath": "socketConnection.ts"
+        }
+      ],
+      "hasMultipleFiles": true,
+      "downloadUrl": "/downloads/playwright-cli.zip",
+      "installCommand": "pa-skills add playwright-cli"
+    },
+    {
+      "id": "popup-cro",
+      "name": "popup-cro",
+      "path": "popup-cro",
+      "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture popup,\" \"email popup,\" \"announcement banner,\" or \"overlay.\" For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.",
+      "tags": [
+        "testing",
+        "design",
+        "performance",
+        "code-generation",
+        "search",
+        "discovery"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:02:01.394Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/popup-cro",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "popup-cro/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/popup-cro.zip",
+      "installCommand": "pa-skills add popup-cro"
+    },
+    {
+      "id": "postgres-patterns",
+      "name": "postgres-patterns",
+      "path": "postgres-patterns",
+      "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.",
+      "tags": [
+        "backend",
+        "database",
+        "sql",
+        "git",
+        "github",
+        "api",
+        "security",
+        "authentication",
+        "skills",
+        "cli",
+        "code-generation",
+        "search",
+        "discovery",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "affaan-m",
+      "updatedAt": "2026-01-29T17:00:36.121Z",
+      "stars": 33784,
+      "sourceUrl": "https://github.com/affaan-m/everything-claude-code/tree/main/skills/postgres-patterns",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "postgres-patterns/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/postgres-patterns.zip",
+      "installCommand": "pa-skills add postgres-patterns"
+    },
+    {
+      "id": "pptx",
+      "name": "pptx",
+      "path": "pptx",
+      "description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks",
+      "tags": [
+        "frontend",
+        "react",
+        "design",
+        "api",
+        "performance",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "updatedAt": "2026-01-29T17:01:36.053Z",
+      "stars": 57164,
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "pptx/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/pptx.zip",
+      "installCommand": "pa-skills add pptx"
+    },
+    {
+      "id": "pricing-strategy",
+      "name": "pricing-strategy",
+      "path": "pricing-strategy",
+      "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' or 'monetization.' This skill covers pricing research, tier structure, and packaging strategy.",
+      "tags": [
+        "testing",
+        "design",
+        "api",
+        "security",
+        "performance",
+        "search",
+        "discovery",
+        "planning",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:01:51.797Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/pricing-strategy",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "pricing-strategy/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/pricing-strategy.zip",
+      "installCommand": "pa-skills add pricing-strategy"
+    },
+    {
+      "id": "programmatic-seo",
+      "name": "programmatic-seo",
+      "path": "programmatic-seo",
+      "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] + [city] pages,\" \"comparison pages,\" \"integration pages,\" or \"building many pages for SEO.\" For auditing existing SEO issues, see seo-audit.",
+      "tags": [
+        "testing",
+        "design",
+        "api",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "search",
+        "discovery",
+        "planning",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:01:40.027Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/programmatic-seo",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "programmatic-seo/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/programmatic-seo.zip",
+      "installCommand": "pa-skills add programmatic-seo"
+    },
+    {
+      "id": "remotion-best-practices",
+      "name": "remotion-best-practices",
+      "path": "remotion-best-practices",
+      "description": "Best practices for Remotion - Video creation in React",
+      "tags": [
+        "frontend",
+        "react",
+        "filesystem",
+        "io",
+        "components"
+      ],
+      "version": "1.0.0",
+      "author": "remotion-dev",
+      "updatedAt": "2026-01-29T17:00:09.807Z",
+      "stars": 33350,
+      "sourceUrl": "https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "remotion-best-practices/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        },
+        {
+          "name": "3d.md",
+          "path": "remotion-best-practices/rules/3d.md",
+          "type": "markdown",
+          "relativePath": "rules\\3d.md"
+        },
+        {
+          "name": "animations.md",
+          "path": "remotion-best-practices/rules/animations.md",
+          "type": "markdown",
+          "relativePath": "rules\\animations.md"
+        },
+        {
+          "name": "assets.md",
+          "path": "remotion-best-practices/rules/assets.md",
+          "type": "markdown",
+          "relativePath": "rules\\assets.md"
+        },
+        {
+          "name": "audio.md",
+          "path": "remotion-best-practices/rules/audio.md",
+          "type": "markdown",
+          "relativePath": "rules\\audio.md"
+        },
+        {
+          "name": "calculate-metadata.md",
+          "path": "remotion-best-practices/rules/calculate-metadata.md",
+          "type": "markdown",
+          "relativePath": "rules\\calculate-metadata.md"
+        },
+        {
+          "name": "can-decode.md",
+          "path": "remotion-best-practices/rules/can-decode.md",
+          "type": "markdown",
+          "relativePath": "rules\\can-decode.md"
+        },
+        {
+          "name": "charts-bar-chart.tsx",
+          "path": "remotion-best-practices/rules/assets/charts-bar-chart.tsx",
+          "type": "code",
+          "relativePath": "rules\\assets\\charts-bar-chart.tsx"
+        },
+        {
+          "name": "charts.md",
+          "path": "remotion-best-practices/rules/charts.md",
+          "type": "markdown",
+          "relativePath": "rules\\charts.md"
+        },
+        {
+          "name": "compositions.md",
+          "path": "remotion-best-practices/rules/compositions.md",
+          "type": "markdown",
+          "relativePath": "rules\\compositions.md"
+        },
+        {
+          "name": "display-captions.md",
+          "path": "remotion-best-practices/rules/display-captions.md",
+          "type": "markdown",
+          "relativePath": "rules\\display-captions.md"
+        },
+        {
+          "name": "extract-frames.md",
+          "path": "remotion-best-practices/rules/extract-frames.md",
+          "type": "markdown",
+          "relativePath": "rules\\extract-frames.md"
+        },
+        {
+          "name": "fonts.md",
+          "path": "remotion-best-practices/rules/fonts.md",
+          "type": "markdown",
+          "relativePath": "rules\\fonts.md"
+        },
+        {
+          "name": "get-audio-duration.md",
+          "path": "remotion-best-practices/rules/get-audio-duration.md",
+          "type": "markdown",
+          "relativePath": "rules\\get-audio-duration.md"
+        },
+        {
+          "name": "get-video-dimensions.md",
+          "path": "remotion-best-practices/rules/get-video-dimensions.md",
+          "type": "markdown",
+          "relativePath": "rules\\get-video-dimensions.md"
+        },
+        {
+          "name": "get-video-duration.md",
+          "path": "remotion-best-practices/rules/get-video-duration.md",
+          "type": "markdown",
+          "relativePath": "rules\\get-video-duration.md"
+        },
+        {
+          "name": "gifs.md",
+          "path": "remotion-best-practices/rules/gifs.md",
+          "type": "markdown",
+          "relativePath": "rules\\gifs.md"
+        },
+        {
+          "name": "images.md",
+          "path": "remotion-best-practices/rules/images.md",
+          "type": "markdown",
+          "relativePath": "rules\\images.md"
+        },
+        {
+          "name": "import-srt-captions.md",
+          "path": "remotion-best-practices/rules/import-srt-captions.md",
+          "type": "markdown",
+          "relativePath": "rules\\import-srt-captions.md"
+        },
+        {
+          "name": "lottie.md",
+          "path": "remotion-best-practices/rules/lottie.md",
+          "type": "markdown",
+          "relativePath": "rules\\lottie.md"
+        },
+        {
+          "name": "maps.md",
+          "path": "remotion-best-practices/rules/maps.md",
+          "type": "markdown",
+          "relativePath": "rules\\maps.md"
+        },
+        {
+          "name": "measuring-dom-nodes.md",
+          "path": "remotion-best-practices/rules/measuring-dom-nodes.md",
+          "type": "markdown",
+          "relativePath": "rules\\measuring-dom-nodes.md"
+        },
+        {
+          "name": "measuring-text.md",
+          "path": "remotion-best-practices/rules/measuring-text.md",
+          "type": "markdown",
+          "relativePath": "rules\\measuring-text.md"
+        },
+        {
+          "name": "parameters.md",
+          "path": "remotion-best-practices/rules/parameters.md",
+          "type": "markdown",
+          "relativePath": "rules\\parameters.md"
+        },
+        {
+          "name": "sequencing.md",
+          "path": "remotion-best-practices/rules/sequencing.md",
+          "type": "markdown",
+          "relativePath": "rules\\sequencing.md"
+        },
+        {
+          "name": "subtitles.md",
+          "path": "remotion-best-practices/rules/subtitles.md",
+          "type": "markdown",
+          "relativePath": "rules\\subtitles.md"
+        },
+        {
+          "name": "tailwind.md",
+          "path": "remotion-best-practices/rules/tailwind.md",
+          "type": "markdown",
+          "relativePath": "rules\\tailwind.md"
+        },
+        {
+          "name": "text-animations-typewriter.tsx",
+          "path": "remotion-best-practices/rules/assets/text-animations-typewriter.tsx",
+          "type": "code",
+          "relativePath": "rules\\assets\\text-animations-typewriter.tsx"
+        },
+        {
+          "name": "text-animations-word-highlight.tsx",
+          "path": "remotion-best-practices/rules/assets/text-animations-word-highlight.tsx",
+          "type": "code",
+          "relativePath": "rules\\assets\\text-animations-word-highlight.tsx"
+        },
+        {
+          "name": "text-animations.md",
+          "path": "remotion-best-practices/rules/text-animations.md",
+          "type": "markdown",
+          "relativePath": "rules\\text-animations.md"
+        },
+        {
+          "name": "timing.md",
+          "path": "remotion-best-practices/rules/timing.md",
+          "type": "markdown",
+          "relativePath": "rules\\timing.md"
+        },
+        {
+          "name": "transcribe-captions.md",
+          "path": "remotion-best-practices/rules/transcribe-captions.md",
+          "type": "markdown",
+          "relativePath": "rules\\transcribe-captions.md"
+        },
+        {
+          "name": "transitions.md",
+          "path": "remotion-best-practices/rules/transitions.md",
+          "type": "markdown",
+          "relativePath": "rules\\transitions.md"
+        },
+        {
+          "name": "transparent-videos.md",
+          "path": "remotion-best-practices/rules/transparent-videos.md",
+          "type": "markdown",
+          "relativePath": "rules\\transparent-videos.md"
+        },
+        {
+          "name": "trimming.md",
+          "path": "remotion-best-practices/rules/trimming.md",
+          "type": "markdown",
+          "relativePath": "rules\\trimming.md"
+        },
+        {
+          "name": "videos.md",
+          "path": "remotion-best-practices/rules/videos.md",
+          "type": "markdown",
+          "relativePath": "rules\\videos.md"
+        }
+      ],
+      "hasMultipleFiles": true,
+      "downloadUrl": "/downloads/remotion-best-practices.zip",
+      "installCommand": "pa-skills add remotion-best-practices"
+    },
+    {
+      "id": "seo-optimizer",
+      "name": "SEO Optimizer",
+      "path": "seo-optimizer",
+      "description": "Search Engine Optimization specialist for content strategy, technical SEO, keyword research, and ranking improvements. Use when optimizing website content, improving search rankings, conducting keyword analysis, or implementing SEO best practices. Expert in on-page SEO, meta tags, schema markup, and Core Web Vitals.",
+      "tags": [
+        "frontend",
+        "react",
+        "vue",
+        "angular",
+        "testing",
+        "design",
+        "ui",
+        "api",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "components",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:02:05.219Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/seo-optimizer",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "seo-optimizer/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/seo-optimizer.zip",
+      "installCommand": "pa-skills add seo-optimizer"
+    },
+    {
+      "id": "seo-review",
+      "name": "seo-review",
+      "path": "seo-review",
+      "description": "Perform a focused SEO audit on JavaScript concept pages to maximize search visibility, featured snippet optimization, and ranking potential",
+      "tags": [
+        "database",
+        "testing",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "mdx",
+        "filesystem",
+        "io",
+        "components",
+        "frontend",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "leonardomso",
+      "updatedAt": "2026-01-29T17:00:33.616Z",
+      "stars": 66207,
+      "sourceUrl": "https://github.com/leonardomso/33-js-concepts/tree/master/.claude/skills/seo-review",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "seo-review/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/seo-review.zip",
+      "installCommand": "pa-skills add seo-review"
+    },
+    {
+      "id": "signup-flow-cro",
+      "name": "signup-flow-cro",
+      "path": "signup-flow-cro",
+      "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" or \"account creation flow.\" For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.",
+      "tags": [
+        "testing",
+        "git",
+        "github",
+        "design",
+        "ux",
+        "security",
+        "authentication",
+        "code-generation",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "davila7",
+      "updatedAt": "2026-01-29T17:02:03.993Z",
+      "stars": 18778,
+      "sourceUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/business-marketing/signup-flow-cro",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "signup-flow-cro/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/signup-flow-cro.zip",
+      "installCommand": "pa-skills add signup-flow-cro"
+    },
+    {
+      "id": "skill-creator",
+      "name": "skill-creator",
+      "path": "skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Gemini CLI's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "tags": [
+        "frontend",
+        "react",
+        "backend",
+        "nodejs",
+        "database",
+        "testing",
+        "design",
+        "api",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "planning",
+        "filesystem",
+        "io",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "google-gemini",
+      "updatedAt": "2026-01-29T17:00:19.284Z",
+      "stars": 92879,
+      "sourceUrl": "https://github.com/google-gemini/gemini-cli/tree/main/packages/core/src/skills/builtin/skill-creator",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "skill-creator/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        },
+        {
+          "name": "init_skill.cjs",
+          "path": "skill-creator/scripts/init_skill.cjs",
+          "type": "text",
+          "relativePath": "scripts\\init_skill.cjs"
+        },
+        {
+          "name": "package_skill.cjs",
+          "path": "skill-creator/scripts/package_skill.cjs",
+          "type": "text",
+          "relativePath": "scripts\\package_skill.cjs"
+        },
+        {
+          "name": "validate_skill.cjs",
+          "path": "skill-creator/scripts/validate_skill.cjs",
+          "type": "text",
+          "relativePath": "scripts\\validate_skill.cjs"
+        }
+      ],
+      "hasMultipleFiles": true,
+      "downloadUrl": "/downloads/skill-creator.zip",
+      "installCommand": "pa-skills add skill-creator"
+    },
+    {
+      "id": "skill-lookup",
+      "name": "skill-lookup",
+      "path": "skill-lookup",
+      "description": "Activates when the user asks about Agent Skills, wants to find reusable AI capabilities, needs to install skills, or mentions skills for Claude. Use for discovering, retrieving, and installing skills.",
+      "tags": [
+        "testing",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "f",
+      "updatedAt": "2026-01-29T17:00:12.941Z",
+      "stars": 143926,
+      "sourceUrl": "https://github.com/f/awesome-chatgpt-prompts/tree/main/plugins/claude/prompts.chat/skills/skill-lookup",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "skill-lookup/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/skill-lookup.zip",
+      "installCommand": "pa-skills add skill-lookup"
+    },
+    {
+      "id": "systematic-debugging",
+      "name": "systematic-debugging",
+      "path": "systematic-debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "tags": [
+        "database",
+        "testing",
+        "git",
+        "version-control",
+        "api",
+        "security",
+        "performance",
+        "skills",
+        "cli",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "filesystem",
+        "io",
+        "components",
+        "frontend"
+      ],
+      "version": "1.0.0",
+      "author": "obra",
+      "updatedAt": "2026-01-29T17:01:55.672Z",
+      "stars": 39100,
+      "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/systematic-debugging",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "systematic-debugging/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/systematic-debugging.zip",
+      "installCommand": "pa-skills add systematic-debugging"
+    },
+    {
+      "id": "test-driven-development",
+      "name": "test-driven-development",
+      "path": "test-driven-development",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code",
+      "tags": [
+        "testing",
+        "jest",
+        "design",
+        "api",
+        "code-generation",
+        "writing"
+      ],
+      "version": "1.0.0",
+      "author": "obra",
+      "updatedAt": "2026-01-29T17:02:07.496Z",
+      "stars": 39100,
+      "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/test-driven-development",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "test-driven-development/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/test-driven-development.zip",
+      "installCommand": "pa-skills add test-driven-development"
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "name": "ui-ux-pro-max",
+      "path": "ui-ux-pro-max",
+      "description": "UI/UX design intelligence. 50 styles, 21 palettes, 50 font pairings, 20 charts, 9 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, mobile app, .html, .tsx, .vue, .svelte. Elements: button, modal, navbar, sidebar, card, table, form, chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, flat design. Topics: color palette, accessibility, animation, layout, typography, font pairing, spacing, hover, shadow, gradient. Integrations: shadcn/ui MCP for component search and examples.",
+      "tags": [
+        "frontend",
+        "react",
+        "vue",
+        "nextjs",
+        "database",
+        "testing",
+        "design",
+        "ui",
+        "ux",
+        "api",
+        "performance",
+        "caching",
+        "skills",
+        "cli",
+        "code-generation",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "filesystem",
+        "io",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "nextlevelbuilder",
+      "updatedAt": "2026-01-29T17:01:24.592Z",
+      "stars": 24549,
+      "sourceUrl": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/main/.claude/skills/ui-ux-pro-max",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "ui-ux-pro-max/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/ui-ux-pro-max.zip",
+      "installCommand": "pa-skills add ui-ux-pro-max"
+    },
+    {
+      "id": "upgrading-expo",
+      "name": "upgrading-expo",
+      "path": "upgrading-expo",
+      "description": "Guidelines for upgrading Expo SDK versions and fixing dependency issues",
+      "tags": [
+        "frontend",
+        "react",
+        "testing",
+        "api",
+        "caching",
+        "performance",
+        "discovery",
+        "documentation",
+        "dx",
+        "filesystem",
+        "io",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "expo",
+      "updatedAt": "2026-01-29T17:01:36.983Z",
+      "stars": 763,
+      "sourceUrl": "https://github.com/expo/skills/tree/main/plugins/upgrading-expo/skills/upgrading-expo",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "upgrading-expo/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/upgrading-expo.zip",
+      "installCommand": "pa-skills add upgrading-expo"
+    },
+    {
+      "id": "vercel-composition-patterns",
+      "name": "vercel-composition-patterns",
+      "path": "vercel-composition-patterns",
+      "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
+      "tags": [
+        "frontend",
+        "react",
+        "code-generation",
+        "filesystem",
+        "io",
+        "components"
+      ],
+      "version": "1.0.0",
+      "author": "vercel-labs",
+      "updatedAt": "2026-01-29T17:00:30.967Z",
+      "stars": 17585,
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "vercel-composition-patterns/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        },
+        {
+          "name": "_sections.md",
+          "path": "vercel-composition-patterns/rules/_sections.md",
+          "type": "markdown",
+          "relativePath": "rules\\_sections.md"
+        },
+        {
+          "name": "_template.md",
+          "path": "vercel-composition-patterns/rules/_template.md",
+          "type": "markdown",
+          "relativePath": "rules\\_template.md"
+        },
+        {
+          "name": "AGENTS.md",
+          "path": "vercel-composition-patterns/AGENTS.md",
+          "type": "markdown",
+          "relativePath": "AGENTS.md"
+        },
+        {
+          "name": "architecture-avoid-boolean-props.md",
+          "path": "vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
+          "type": "markdown",
+          "relativePath": "rules\\architecture-avoid-boolean-props.md"
+        },
+        {
+          "name": "architecture-compound-components.md",
+          "path": "vercel-composition-patterns/rules/architecture-compound-components.md",
+          "type": "markdown",
+          "relativePath": "rules\\architecture-compound-components.md"
+        },
+        {
+          "name": "metadata.json",
+          "path": "vercel-composition-patterns/metadata.json",
+          "type": "code",
+          "relativePath": "metadata.json"
+        },
+        {
+          "name": "patterns-children-over-render-props.md",
+          "path": "vercel-composition-patterns/rules/patterns-children-over-render-props.md",
+          "type": "markdown",
+          "relativePath": "rules\\patterns-children-over-render-props.md"
+        },
+        {
+          "name": "patterns-explicit-variants.md",
+          "path": "vercel-composition-patterns/rules/patterns-explicit-variants.md",
+          "type": "markdown",
+          "relativePath": "rules\\patterns-explicit-variants.md"
+        },
+        {
+          "name": "react19-no-forwardref.md",
+          "path": "vercel-composition-patterns/rules/react19-no-forwardref.md",
+          "type": "markdown",
+          "relativePath": "rules\\react19-no-forwardref.md"
+        },
+        {
+          "name": "README.md",
+          "path": "vercel-composition-patterns/README.md",
+          "type": "markdown",
+          "relativePath": "README.md"
+        },
+        {
+          "name": "state-context-interface.md",
+          "path": "vercel-composition-patterns/rules/state-context-interface.md",
+          "type": "markdown",
+          "relativePath": "rules\\state-context-interface.md"
+        },
+        {
+          "name": "state-decouple-implementation.md",
+          "path": "vercel-composition-patterns/rules/state-decouple-implementation.md",
+          "type": "markdown",
+          "relativePath": "rules\\state-decouple-implementation.md"
+        },
+        {
+          "name": "state-lift-state.md",
+          "path": "vercel-composition-patterns/rules/state-lift-state.md",
+          "type": "markdown",
+          "relativePath": "rules\\state-lift-state.md"
+        }
+      ],
+      "hasMultipleFiles": true,
+      "downloadUrl": "/downloads/vercel-composition-patterns.zip",
+      "installCommand": "pa-skills add vercel-composition-patterns"
+    },
+    {
+      "id": "vercel-react-native-skills",
+      "name": "vercel-react-native-skills",
+      "path": "vercel-react-native-skills",
+      "description": "React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing animations, or working with native modules. Triggers on tasks involving React Native, Expo, mobile performance, or native platform APIs.",
+      "tags": [
+        "frontend",
+        "react",
+        "design",
+        "ui",
+        "performance",
+        "code-generation",
+        "filesystem",
+        "io",
+        "components"
+      ],
+      "version": "1.0.0",
+      "author": "vercel-labs",
+      "updatedAt": "2026-01-29T17:01:22.202Z",
+      "stars": 17585,
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "vercel-react-native-skills/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        },
+        {
+          "name": "_sections.md",
+          "path": "vercel-react-native-skills/rules/_sections.md",
+          "type": "markdown",
+          "relativePath": "rules\\_sections.md"
+        },
+        {
+          "name": "_template.md",
+          "path": "vercel-react-native-skills/rules/_template.md",
+          "type": "markdown",
+          "relativePath": "rules\\_template.md"
+        },
+        {
+          "name": "AGENTS.md",
+          "path": "vercel-react-native-skills/AGENTS.md",
+          "type": "markdown",
+          "relativePath": "AGENTS.md"
+        },
+        {
+          "name": "animation-derived-value.md",
+          "path": "vercel-react-native-skills/rules/animation-derived-value.md",
+          "type": "markdown",
+          "relativePath": "rules\\animation-derived-value.md"
+        },
+        {
+          "name": "animation-gpu-properties.md",
+          "path": "vercel-react-native-skills/rules/animation-gpu-properties.md",
+          "type": "markdown",
+          "relativePath": "rules\\animation-gpu-properties.md"
+        },
+        {
+          "name": "design-system-compound-components.md",
+          "path": "vercel-react-native-skills/rules/design-system-compound-components.md",
+          "type": "markdown",
+          "relativePath": "rules\\design-system-compound-components.md"
+        },
+        {
+          "name": "fonts-config-plugin.md",
+          "path": "vercel-react-native-skills/rules/fonts-config-plugin.md",
+          "type": "markdown",
+          "relativePath": "rules\\fonts-config-plugin.md"
+        },
+        {
+          "name": "imports-design-system-folder.md",
+          "path": "vercel-react-native-skills/rules/imports-design-system-folder.md",
+          "type": "markdown",
+          "relativePath": "rules\\imports-design-system-folder.md"
+        },
+        {
+          "name": "js-hoist-intl.md",
+          "path": "vercel-react-native-skills/rules/js-hoist-intl.md",
+          "type": "markdown",
+          "relativePath": "rules\\js-hoist-intl.md"
+        },
+        {
+          "name": "list-performance-callbacks.md",
+          "path": "vercel-react-native-skills/rules/list-performance-callbacks.md",
+          "type": "markdown",
+          "relativePath": "rules\\list-performance-callbacks.md"
+        },
+        {
+          "name": "list-performance-function-references.md",
+          "path": "vercel-react-native-skills/rules/list-performance-function-references.md",
+          "type": "markdown",
+          "relativePath": "rules\\list-performance-function-references.md"
+        },
+        {
+          "name": "list-performance-images.md",
+          "path": "vercel-react-native-skills/rules/list-performance-images.md",
+          "type": "markdown",
+          "relativePath": "rules\\list-performance-images.md"
+        },
+        {
+          "name": "list-performance-inline-objects.md",
+          "path": "vercel-react-native-skills/rules/list-performance-inline-objects.md",
+          "type": "markdown",
+          "relativePath": "rules\\list-performance-inline-objects.md"
+        },
+        {
+          "name": "list-performance-item-expensive.md",
+          "path": "vercel-react-native-skills/rules/list-performance-item-expensive.md",
+          "type": "markdown",
+          "relativePath": "rules\\list-performance-item-expensive.md"
+        },
+        {
+          "name": "list-performance-item-memo.md",
+          "path": "vercel-react-native-skills/rules/list-performance-item-memo.md",
+          "type": "markdown",
+          "relativePath": "rules\\list-performance-item-memo.md"
+        },
+        {
+          "name": "list-performance-item-types.md",
+          "path": "vercel-react-native-skills/rules/list-performance-item-types.md",
+          "type": "markdown",
+          "relativePath": "rules\\list-performance-item-types.md"
+        },
+        {
+          "name": "list-performance-virtualize.md",
+          "path": "vercel-react-native-skills/rules/list-performance-virtualize.md",
+          "type": "markdown",
+          "relativePath": "rules\\list-performance-virtualize.md"
+        },
+        {
+          "name": "metadata.json",
+          "path": "vercel-react-native-skills/metadata.json",
+          "type": "code",
+          "relativePath": "metadata.json"
+        },
+        {
+          "name": "monorepo-native-deps-in-app.md",
+          "path": "vercel-react-native-skills/rules/monorepo-native-deps-in-app.md",
+          "type": "markdown",
+          "relativePath": "rules\\monorepo-native-deps-in-app.md"
+        },
+        {
+          "name": "monorepo-single-dependency-versions.md",
+          "path": "vercel-react-native-skills/rules/monorepo-single-dependency-versions.md",
+          "type": "markdown",
+          "relativePath": "rules\\monorepo-single-dependency-versions.md"
+        },
+        {
+          "name": "navigation-native-navigators.md",
+          "path": "vercel-react-native-skills/rules/navigation-native-navigators.md",
+          "type": "markdown",
+          "relativePath": "rules\\navigation-native-navigators.md"
+        },
+        {
+          "name": "react-compiler-destructure-functions.md",
+          "path": "vercel-react-native-skills/rules/react-compiler-destructure-functions.md",
+          "type": "markdown",
+          "relativePath": "rules\\react-compiler-destructure-functions.md"
+        },
+        {
+          "name": "react-compiler-reanimated-shared-values.md",
+          "path": "vercel-react-native-skills/rules/react-compiler-reanimated-shared-values.md",
+          "type": "markdown",
+          "relativePath": "rules\\react-compiler-reanimated-shared-values.md"
+        },
+        {
+          "name": "react-state-dispatcher.md",
+          "path": "vercel-react-native-skills/rules/react-state-dispatcher.md",
+          "type": "markdown",
+          "relativePath": "rules\\react-state-dispatcher.md"
+        },
+        {
+          "name": "react-state-fallback.md",
+          "path": "vercel-react-native-skills/rules/react-state-fallback.md",
+          "type": "markdown",
+          "relativePath": "rules\\react-state-fallback.md"
+        },
+        {
+          "name": "react-state-minimize.md",
+          "path": "vercel-react-native-skills/rules/react-state-minimize.md",
+          "type": "markdown",
+          "relativePath": "rules\\react-state-minimize.md"
+        },
+        {
+          "name": "README.md",
+          "path": "vercel-react-native-skills/README.md",
+          "type": "markdown",
+          "relativePath": "README.md"
+        },
+        {
+          "name": "rendering-no-falsy-and.md",
+          "path": "vercel-react-native-skills/rules/rendering-no-falsy-and.md",
+          "type": "markdown",
+          "relativePath": "rules\\rendering-no-falsy-and.md"
+        },
+        {
+          "name": "rendering-text-in-text-component.md",
+          "path": "vercel-react-native-skills/rules/rendering-text-in-text-component.md",
+          "type": "markdown",
+          "relativePath": "rules\\rendering-text-in-text-component.md"
+        },
+        {
+          "name": "scroll-position-no-state.md",
+          "path": "vercel-react-native-skills/rules/scroll-position-no-state.md",
+          "type": "markdown",
+          "relativePath": "rules\\scroll-position-no-state.md"
+        },
+        {
+          "name": "state-ground-truth.md",
+          "path": "vercel-react-native-skills/rules/state-ground-truth.md",
+          "type": "markdown",
+          "relativePath": "rules\\state-ground-truth.md"
+        },
+        {
+          "name": "ui-expo-image.md",
+          "path": "vercel-react-native-skills/rules/ui-expo-image.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-expo-image.md"
+        },
+        {
+          "name": "ui-image-gallery.md",
+          "path": "vercel-react-native-skills/rules/ui-image-gallery.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-image-gallery.md"
+        },
+        {
+          "name": "ui-measure-views.md",
+          "path": "vercel-react-native-skills/rules/ui-measure-views.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-measure-views.md"
+        },
+        {
+          "name": "ui-menus.md",
+          "path": "vercel-react-native-skills/rules/ui-menus.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-menus.md"
+        },
+        {
+          "name": "ui-native-modals.md",
+          "path": "vercel-react-native-skills/rules/ui-native-modals.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-native-modals.md"
+        },
+        {
+          "name": "ui-pressable.md",
+          "path": "vercel-react-native-skills/rules/ui-pressable.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-pressable.md"
+        },
+        {
+          "name": "ui-safe-area-scroll.md",
+          "path": "vercel-react-native-skills/rules/ui-safe-area-scroll.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-safe-area-scroll.md"
+        },
+        {
+          "name": "ui-scrollview-content-inset.md",
+          "path": "vercel-react-native-skills/rules/ui-scrollview-content-inset.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-scrollview-content-inset.md"
+        },
+        {
+          "name": "ui-styling.md",
+          "path": "vercel-react-native-skills/rules/ui-styling.md",
+          "type": "markdown",
+          "relativePath": "rules\\ui-styling.md"
+        }
+      ],
+      "hasMultipleFiles": true,
+      "downloadUrl": "/downloads/vercel-react-native-skills.zip",
+      "installCommand": "pa-skills add vercel-react-native-skills"
+    },
+    {
+      "id": "vue-best-practices",
+      "name": "vue-best-practices",
+      "path": "vue-best-practices",
+      "description": "Vue 3 and Vue.js best practices for TypeScript, vue-tsc, and Volar. This skill should be used when writing, reviewing, or refactoring Vue components to ensure correct typing patterns. Triggers on tasks involving Vue components, props extraction, wrapper components, template type checking, or Volar configuration.",
+      "tags": [
+        "frontend",
+        "vue",
+        "git",
+        "github",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "components",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "antfu",
+      "updatedAt": "2026-01-29T17:01:42.353Z",
+      "stars": 1460,
+      "sourceUrl": "https://github.com/antfu/skills/tree/main/skills/vue-best-practices",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "vue-best-practices/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/vue-best-practices.zip",
+      "installCommand": "pa-skills add vue-best-practices"
+    },
+    {
+      "id": "wcag-audit-patterns",
+      "name": "wcag-audit-patterns",
+      "path": "wcag-audit-patterns",
+      "description": "Conduct WCAG 2.2 accessibility audits with automated testing, manual verification, and remediation guidance. Use when auditing websites for accessibility, fixing WCAG violations, or implementing accessible design patterns.",
+      "tags": [
+        "testing",
+        "design",
+        "ui",
+        "skills",
+        "cli",
+        "components",
+        "frontend"
+      ],
+      "version": "1.0.0",
+      "author": "wshobson",
+      "updatedAt": "2026-01-29T17:00:34.940Z",
+      "stars": 27168,
+      "sourceUrl": "https://github.com/wshobson/agents/tree/main/plugins/accessibility-compliance/skills/wcag-audit-patterns",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "wcag-audit-patterns/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/wcag-audit-patterns.zip",
+      "installCommand": "pa-skills add wcag-audit-patterns"
+    },
+    {
+      "id": "web-design-guidelines",
+      "name": "web-design-guidelines",
+      "path": "web-design-guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "tags": [
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "calcom",
+      "updatedAt": "2026-01-29T16:59:55.655Z",
+      "stars": 39914,
+      "sourceUrl": "https://github.com/calcom/cal.com/tree/main/.claude/skills/web-design-guidelines",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "web-design-guidelines/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/web-design-guidelines.zip",
+      "installCommand": "pa-skills add web-design-guidelines"
+    },
+    {
+      "id": "webapp-testing",
+      "name": "webapp-testing",
+      "path": "webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "tags": [
+        "frontend",
+        "backend",
+        "testing",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "filesystem",
+        "io"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "updatedAt": "2026-01-29T17:01:45.533Z",
+      "stars": 57164,
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "webapp-testing/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/webapp-testing.zip",
+      "installCommand": "pa-skills add webapp-testing"
+    },
+    {
+      "id": "xlsx",
+      "name": "xlsx",
+      "path": "xlsx",
+      "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas",
+      "tags": [
+        "testing",
+        "code-generation",
+        "writing",
+        "search",
+        "discovery",
+        "documentation",
+        "dx",
+        "filesystem",
+        "io",
+        "automation",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "updatedAt": "2026-01-29T17:01:38.978Z",
+      "stars": 57164,
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "path": "xlsx/SKILL.md",
+          "type": "markdown",
+          "relativePath": "SKILL.md"
+        }
+      ],
+      "hasMultipleFiles": false,
+      "downloadUrl": "/downloads/xlsx.zip",
+      "installCommand": "pa-skills add xlsx"
     }
   ]
 }

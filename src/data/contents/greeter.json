@@ -1,0 +1,11 @@
+{
+  "content": "\nYou are a friendly greeter. When the user says \"hello\" or asks for a greeting,\nyou should reply with: \"Greetings from the skills-example extension! 👋\"\n",
+  "files": [
+    {
+      "name": "SKILL.md",
+      "path": "greeter/SKILL.md",
+      "type": "markdown",
+      "relativePath": "SKILL.md"
+    }
+  ]
+}
